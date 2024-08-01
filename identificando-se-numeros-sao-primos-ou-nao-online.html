@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang = "pt-br">
+        <head> 
+         <title> Primos ou não </title>   
+        </head>
+        <body style="background-color:black;">
+            <script>
+                function PrimoOuNao(){
+                    var N = document.getElementById("numero").value;
+                    var QuantidadeDivisoresN = 0;
+                    var DivisoresN = "";
+                    var i = 1;
+                    for (i = 1; i <= N; i++){
+                        if (N%i === 0){
+                    QuantidadeDivisoresN = QuantidadeDivisoresN + 1; // Mesma coisa de QuantidadeDivisoresN++
+                    DivisoresN += i + ", "; // Mesma coisa de DivisoresN = DivisoresN + i
+                        }
+                    }           
+                    if (QuantidadeDivisoresN === 2){
+                        alert (`O número ${N} é primo.\n Seus divisores são: {${DivisoresN}}`);
+                    }else{
+                        alert (`O número ${N} não é primo.\n Seus divisores são: {${DivisoresN}}`);
+                    }
+                }    
+            
+            </script>
+            <h1 style="color:green;font-size:400%;margin-left:400px;margin-right:400px;text-align:center;"> Identificador de números primos </h1>
+            <h2 style="color:white;"> Digite um número e descubra se ele é primo ou não </h2>
+            <form style=color:green;font-size:200%;>
+                <label style="color:green" for="numero"> Número: </label> <br>
+                <input type="number" id="numero" name="numero" value=""> <br> <br>
+            
+            </form>
+
+            <button onclick="PrimoOuNao()"> Clique aqui para verificar se o número inserido é primo ou não  </button>
+        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </html>
